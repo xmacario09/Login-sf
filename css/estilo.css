@@ -1,0 +1,243 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Honk&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Orbitron:wght@400..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Zen+Dots&display=swap');
+
+
+/* reset */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+
+
+
+body{
+    font-family: "Open Sans", sans-serif;
+}
+
+/* main */
+.conteiner{
+    display: flex; 
+    background-color: aliceblue;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.conteudo{
+    position: relative;
+    background-color: #fff;
+    border-radius: 15px;
+    max-width: 1000px;
+    min-height: 50%;
+    display: flex;              
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Fundo azul */
+.conteudo::before{
+    content: "";
+    position: absolute;
+    left: 0;
+    background-color: rgb(1, 19, 61);
+    width: 45%;
+    height: 100%;
+    border-top-left-radius: 15px;
+    border-bottom-left-radius: 15px;
+    z-index: 0;
+}
+
+.Primeira-coluna{
+  flex: 0 0 45%;     /* mesma largura do fundo azul (::before) */
+  position: relative;
+  z-index: 1;           /* fica acima do ::before */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;   /* centro vertical */
+  align-items: center;       /* centro horizontal */
+  height: 100%;              /* ocupar toda a altura de .conteudo */
+}
+
+.imagem-sf{
+    padding: 1px;
+    max-width: 30%;   /* diminui a logo */
+    height: auto;
+    display: block;
+    margin-bottom: 20px;  /* espaço entre logo e texto */
+}
+
+.titulo{
+    color: black;
+}
+
+.titulo-primario{
+    
+    font-family: 'Times New Roman', Times, serif;
+    color:#FE741F;
+    font-size: 25px;
+    font-weight: bold;
+    text-transform: capitalize;
+}
+
+.descricao-primeira-coluna{
+    font-size: 14px;
+    color: #ffffffcc;
+    font-weight: 200;
+    line-height: 30px;
+}
+
+.segunda-descrição{
+    text-decoration: none;
+    margin-top: 5px;
+    color: #cccccc;
+    padding: 10px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+
+/* Botão geral */
+.btn{
+    border: 1px solid #000000;
+    text-transform: uppercase;
+    color: #000000;
+    border-radius: 15px ;
+    font-size: 12px;
+    padding: 10px 30px;
+    cursor: pointer;
+    margin-top: 10px;
+    transition: 0.3s;
+    font-weight: bold;
+    align-self: center;
+    width: 150px;
+}
+
+/* entrar */
+.btn-primario{
+    color: #ffffff;
+    margin-top: 1px;
+    border: 1px solid #cccc;
+    background-color: transparent;
+}
+
+.btn-primario:hover{
+    transform: translateY(-3px);
+    background-color: rgb(255, 72, 0);
+    color: #ffffff;
+    
+}
+
+/* Ínicio da segunda coluna do primeiro conteúdo */
+
+.segunda-coluna{
+    flex: 2 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Criar conta */
+.titulo-secundario{
+    padding: 10px;
+    color: rgb(1, 19, 61);
+}
+
+/* Lista das resdes sociais */
+.lista-rede-social{
+    display: flex;
+    gap: 7px;
+    list-style: none;
+}
+
+/* Ícones das redes sociais */
+.item-midia-social i{
+    border: 1px solid #cccc;
+    border-radius: 50%;
+    width: 35px;
+    height: 35px;
+    line-height: 35px;
+    text-align: center;  
+}
+
+.item-midia-social a{
+    color: rgb(2, 47, 151);
+    transition: 0.3s;
+}
+
+.item-midia-social i:hover{
+    transform: translateY(-3px);
+    border:1px solid rgb(255, 72, 0);
+    color:rgb(255, 72, 0)
+}
+
+.descricao-segunda-coluna{
+    margin: 5px;
+    font-size: 12px;
+    color: #ccccccf1;
+
+}
+
+.form {
+    display: flex;
+    flex-direction: column; 
+    width: 100%;
+    max-width: 450px;
+    margin: 0 auto;    
+}
+
+.label-form{
+  position: relative;
+  margin: 5px 0;
+}
+
+
+.label-form i{
+  position: absolute;
+  left: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: rgb(1, 19, 61);
+  pointer-events: none;   
+}
+
+
+.label-form input{
+  width: 100%;
+  height: 40px;
+  padding: 5px 10px;
+  padding-left: 35px;     
+  border-radius: 6px;
+  border: 1px solid #cccccc;
+  box-sizing: border-box;
+}
+.link-esqueci-senha{
+    align-self: flex-end;  
+    margin: 8px 157px 8px;
+    font-size: 11px;
+    color: rgb(102, 0, 153);   
+    text-decoration: none;
+}
+
+.link-esqueci-senha:hover{
+    transform: translateY(-2px);
+    color: rgb(255, 72, 0);
+    text-decoration: underline;
+}
+
+/* Login */
+.btn-secundario {
+    color: #ffffff;
+    background-color: rgb(1, 19, 61);
+    border:none;   
+}
+
+.btn-secundario:hover{
+    transform: translateY(-3px);
+    background-color: rgb(255, 72, 0);
+    color: #ffffff;
+}
+
+.primeiro-conteudo {
+    display: flex;
+}
